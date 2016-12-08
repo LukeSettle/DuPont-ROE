@@ -13,4 +13,12 @@ class IntrinioApi
   def companies
     self.class.get('/companies', basic_auth: self.auth)['data']
   end
+
+  def find_company(id)
+    self.class.get("/companies?identifier=#{id}", basic_auth: self.auth)
+  end
+
+  def data_point(identifier, item)
+    self.class.get("/data_point?identifier=#{identifier}&item=#{item}", basic_auth: self.auth)
+  end
 end
