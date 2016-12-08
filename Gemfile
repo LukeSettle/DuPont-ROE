@@ -12,6 +12,7 @@ gem 'httparty'
 gem 'devise'
 gem "figaro"
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'puma'
 
 group :development, :test do
   gem 'pry'
@@ -20,4 +21,9 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
 end
