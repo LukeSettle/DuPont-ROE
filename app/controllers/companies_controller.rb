@@ -26,7 +26,7 @@ class CompaniesController < ApplicationController
       @asset_turnover = @total_revenue/@total_assets
       @leverage = @total_assets/@total_equity
 
-      @roe = @profitablity * @asset_turnover * @leverage
+      @roe = (@profitablity * @asset_turnover * @leverage).to_f
     end
 
     def data_point(ticker, item)

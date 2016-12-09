@@ -1,0 +1,31 @@
+.part {
+  border: 1px solid grey;
+  text-align: center;
+}
+
+.operator {
+  text-align: center;
+  font-size: 30px;
+  top: 28px;
+}
+
+.answer {
+  text-align: center;
+}
+
+.data-point {
+  font-size: 12px;
+  display: inline;
+  margin-right: 10px;
+}
+
+.formula {
+  width: 90%;
+  display: block;
+  margin: 0px auto;
+}
+
+.name {
+  text-align: center;;
+  font-size: 25px;
+}

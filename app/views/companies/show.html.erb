@@ -1,8 +1,27 @@
-<div class="jumbotron">
-  <h1><%= @company['name'] %></h1>
-  <p>
-    <%= attributes @company %><br>
-    <%= "Roe: #{@roe}" %>
-  </p>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-</div>
+<div class='name'><%= @company['name'] %>Amazon</div>
+<ul class='container grid-12-large well well-lg formula'>
+  <div class='row'>
+    <li class='part col-md-3'>
+      <p>Profitablity</p>
+      <div class='data-point'>Net Income:</div><%= @net_income %><hr/><div class='data-point'>Total Revenue:</div><%= @total_revenue %>
+    </li>
+    <li class='operator col-md-1'>
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </li>
+    <li class='part col-md-3'>
+      <p>Asset Turnover</p>
+      <div class='data-point'>Total Revenue:</div> <%= @total_revenue %><hr/><div class='data-point'>Total Assets:</div><%= @total_assets %>
+    </li>
+    <li class='operator col-md-1'>
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </li>
+    <li class='part col-md-3'>
+      <p>Leverage</p>
+      <div class='data-point'>Total Assets:</div><%= @total_assets %><hr/><div class='data-point'>Total Equity:</div><%= @total_equity %>
+    </li>
+    <li class='operator col-md-1'>
+      =
+    </li>
+  </div>
+  <h1 class='answer'><%= @roe %></h1>
+</ul>

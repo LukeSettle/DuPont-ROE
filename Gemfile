@@ -12,9 +12,12 @@ gem 'devise'
 gem "figaro"
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'puma'
+gem 'font-awesome-sass'
 
 group :development, :test do
   gem 'pry'
+  gem 'better_errors'
+  gem 'thin'
 end
 
 group :development do
