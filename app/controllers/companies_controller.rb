@@ -2,7 +2,11 @@ class CompaniesController < ApplicationController
   before_action :set_api
 
   def index
-    @companies = @api.companies
+    if params[:query]
+      @companies = @api.companies params[:query]
+    else
+      @companies = @api.companies
+    end
   end
 
   def show

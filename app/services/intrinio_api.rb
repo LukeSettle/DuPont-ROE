@@ -10,8 +10,8 @@ class IntrinioApi
     @auth
   end
 
-  def companies
-    self.class.get('/companies', basic_auth: self.auth)['data']
+  def companies(query = nil)
+    self.class.get("/companies?query=#{query}", basic_auth: self.auth)['data']
   end
 
   def find_company(id)
