@@ -3,13 +3,17 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "companies";
-@import url('https://fonts.googleapis.com/css?family=Cinzel');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
 $brand-primary: black;
 
 html *
 {
-   font-family: 'Cinzel', serif;
+   font-family: 'Playfair Display', serif;
+}
+
+body {
+  margin: 0px 20px;
 }
 
 ul {

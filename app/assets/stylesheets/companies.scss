@@ -1,3 +1,13 @@
+.companies-container {
+  margin: 0px 200px;
+
+  .company {
+    background-color: white;
+    color: $brand-primary;
+    text-align: center;
+  }
+}
+
 .part {
   border: 1px solid grey;
   text-align: center;

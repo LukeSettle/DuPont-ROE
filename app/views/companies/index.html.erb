@@ -1,9 +1,10 @@
-<h1>Companies list</h1>
-<% @companies.each do |company| %>
-  <div class="list-group">
-    <%= link_to company_path(company['ticker']), class: 'list-group-item active' do %>
-      <h4 class="list-group-item-heading"><%= company['name'] %></h4>
-      <%= attributes company %>
-    <% end %>
-  </div>
-<% end %>
+<div class='companies-container'>
+  <h1>Companies list</h1>
+  <% @companies.each do |company| %>
+    <div class="list-group">
+      <%= link_to company_path(company['ticker']), class: 'company list-group-item active' do %>
+        <h4 class="list-group-item-heading"><%= company['name'] %></h4>
+      <% end %>
+    </div>
+  <% end %>
+</div>
