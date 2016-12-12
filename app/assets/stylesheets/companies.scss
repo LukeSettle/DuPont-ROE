@@ -16,7 +16,12 @@
 .operator {
   text-align: center;
   font-size: 30px;
+  position: relative;
   top: 28px;
+
+  @media only screen and (max-width: 500px) {
+    top: 0;
+  }
 }
 
 .answer {
