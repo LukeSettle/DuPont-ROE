@@ -1,3 +1,4 @@
+@import "common/_variables";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome-sprockets";
@@ -5,7 +6,7 @@
 @import "companies";
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
-$brand-primary: black;
+$link-color: black;
 
 html *
 {

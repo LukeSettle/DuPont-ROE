@@ -1,6 +1,6 @@
 <div class='name'><%= @company['name'] %></div>
-<ul class='container grid-12-large well well-lg formula'>
-  <div class='row'>
+<ul class='container grid-12-large well well-lg formula-container'>
+  <div class='row formula'>
     <li class='part col-md-3'>
       <p>Profitablity</p>
       <div class='data-point'>Net Income:</div><%= @net_income %><hr/><div class='data-point'>Total Revenue:</div><%= @total_revenue %>
@@ -19,9 +19,15 @@
       <p>Leverage</p>
       <div class='data-point'>Total Assets:</div><%= @total_assets %><hr/><div class='data-point'>Total Equity:</div><%= @total_equity %>
     </li>
-    <li class='operator col-md-1'>
+  </div>
+  <div class='row'>
+    <li class='operator col-md-12 equals'>
       =
     </li>
   </div>
-  <h1 class='answer'><%= @roe %></h1>
+  <div class='row'>
+    <div class='col-md-12' >
+      <h1 class='answer'><%= @roe %></h1>
+    </div>
+  </div>
 </ul>

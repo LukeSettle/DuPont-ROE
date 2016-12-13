@@ -15,6 +15,7 @@ gem 'puma'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'kaminari'
+gem 'dalli'
 
 group :development, :test do
   gem 'pry'
