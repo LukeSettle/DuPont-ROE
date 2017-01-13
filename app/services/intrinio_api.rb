@@ -29,6 +29,12 @@ class IntrinioApi
     end
   end
 
+  def historical_data(identifier, item, start_date, end_date)
+    Rails.cache.fetch "historical_data_#{identifier}_#{item}_#{start_date}_#{end_date}", expires_in: 5.minutes do
+      self.class.get("/historical_data?identifier=#{identifier}&item=#{item}&start_date=#{start_date}&end_date=#{end_date}", basic_auth: self.auth).parsed_response
+    end
+  end
+
   protected
 
     def to_hash(array)

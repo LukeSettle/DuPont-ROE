@@ -1,23 +1,23 @@
-<div class='name'><%= @company['name'] %></div>
+<div class='name'><%= @company.name %></div>
 <ul class='container grid-12-large well well-lg formula-container'>
   <div class='row formula'>
     <li class='part col-md-3'>
       <p>Profitablity</p>
-      <div class='data-point'>Net Income:</div><%= @net_income %><hr/><div class='data-point'>Total Revenue:</div><%= @total_revenue %>
+      <div class='data-point'>Net Income:</div><%= @company.net_income %><hr/><div class='data-point'>Total Revenue:</div><%= @company.total_revenue %>
     </li>
     <li class='operator col-md-1'>
       <i class="fa fa-times" aria-hidden="true"></i>
     </li>
     <li class='part col-md-3'>
       <p>Asset Turnover</p>
-      <div class='data-point'>Total Revenue:</div> <%= @total_revenue %><hr/><div class='data-point'>Total Assets:</div><%= @total_assets %>
+      <div class='data-point'>Total Revenue:</div> <%= @company.total_revenue %><hr/><div class='data-point'>Total Assets:</div><%= @company.total_assets %>
     </li>
     <li class='operator col-md-1'>
       <i class="fa fa-times" aria-hidden="true"></i>
     </li>
     <li class='part col-md-3'>
       <p>Leverage</p>
-      <div class='data-point'>Total Assets:</div><%= @total_assets %><hr/><div class='data-point'>Total Equity:</div><%= @total_equity %>
+      <div class='data-point'>Total Assets:</div><%= @company.total_assets %><hr/><div class='data-point'>Total Equity:</div><%= @company.total_equity %>
     </li>
   </div>
   <div class='row'>
@@ -27,7 +27,11 @@
   </div>
   <div class='row'>
     <div class='col-md-12' >
-      <h1 class='answer'><%= @roe %></h1>
+      <h1 class='answer'><%= @company.roe %></h1>
     </div>
   </div>
 </ul>
+
+<div class='historical-graph-container'>
+  <%= line_chart @company.historical_roe_graph_data, adapter: 'google', id: 'historical-roe-graph' %>
+</div>

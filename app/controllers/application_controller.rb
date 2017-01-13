@@ -16,4 +16,8 @@ class ApplicationController < ActionController::Base
     def set_search
       @search = Search.new
     end
+
+    def set_api
+      @api = IntrinioApi.new
+    end
 end
